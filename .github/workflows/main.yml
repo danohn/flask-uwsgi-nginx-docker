@@ -15,5 +15,5 @@ jobs:
       - name: Navigate to Code Directory
         run: cd ${{ github.workspace }}
 
-      - name: Run Docker Compose Up with Sudo
+      - name: Run Docker Compose Up
         run: docker compose up -d --build
