@@ -1,0 +1,19 @@
+name: Docker Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Navigate to Code Directory
+        run: cd ${{ github.workspace }}
+
+      - name: Run Docker Compose Up with Sudo
+        run: docker-compose up -d --build
