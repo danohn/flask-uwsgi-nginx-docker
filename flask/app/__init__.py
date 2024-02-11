@@ -5,4 +5,4 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index_route():
-    return "Hello, world, faster!"
+    return "Hello world, faster!"
